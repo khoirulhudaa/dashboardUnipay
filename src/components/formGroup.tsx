@@ -1,11 +1,9 @@
-import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import { usePayment } from "../utils/validations/paymentValidation"
-import { useLoginFormik } from "../utils/validations/validationLogin"
-import { useRegistrationFormik } from "../utils/validations/validationRegister"
-import Button from "./button"
-import ErrorMessage from "./errorMessage"
-import InputField from "./inputField"
+import { usePayment } from "../utils/validations/paymentValidation";
+import { useLoginFormik } from "../utils/validations/validationLogin";
+import { useRegistrationFormik } from "../utils/validations/validationRegister";
+import Button from "./button";
+import ErrorMessage from "./errorMessage";
+import InputField from "./inputField";
 
 interface formGroupProps {
     type?: string,

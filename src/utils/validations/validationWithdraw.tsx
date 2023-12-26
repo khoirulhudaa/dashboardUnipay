@@ -9,8 +9,6 @@ export const useWithdrawFormik = ({onError, onResponse}: {onError?: any, onRespo
 
     const balance = store.getState().paymentSlice.balance
 
-    console.log('balacknce', balance)
-
     const formik = useFormik<paymentInterface>({
         initialValues: {
             bank_code: '',
@@ -45,9 +43,8 @@ export const useWithdrawFormik = ({onError, onResponse}: {onError?: any, onRespo
                 console.log('values:', data)
 
                 if (values.amount > balance) {
-                    // Display error message for exceeding balance
-                    formik.setErrors({ amount: `Withdraw maximal ${toRupiah(balance)}` });
-                    return; // Prevent further processing
+                    formik.setErrors({ amount: `Pencairan maksimal ${toRupiah(balance)}` });
+                    return; 
                 }
 
                 const response = await API.disbursementAdmin(data)

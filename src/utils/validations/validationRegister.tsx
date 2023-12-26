@@ -17,17 +17,17 @@ export const useRegistrationFormik = ({onError, onResponse}: {onError?: any, onR
     },
     validationSchema: Yup.object({
       admin_name: Yup.string()
-        .max(15, 'Must be 15 characters or less')
-        .required('This field is required.'),
+        .max(15, 'Maksimal 15 karakter')
+        .required('Tidak boleh kosong!'),
       email_admin: Yup.string()
-        .email('Invalid email address')
-        .required('This field is required.'),
+        .email('Format email salah')
+        .required('Tidak boleh kosong!'),
       password: Yup.string()
-        .min(6, 'Must be at least 6 characters')
-        .required('This field is required.'),
+        .min(6, 'Minimal 6 karakter')
+        .required('Tidak boleh kosong!'),
       telephone_admin: Yup.string()
-        .max(13, 'Maximum only 13 characters')
-        .required('This field is required.'),
+        .max(13, 'Maksimal 13 karakter')
+        .required('Tidak boleh kosong!'),
     }),
     onSubmit: async (values: any, {resetForm}) => {
       try {

@@ -58,7 +58,7 @@ export const usePayment = ({onError, onResponse}: {onError?: any, onResponse?: a
             .max(9999999, 'Maksimal nominal Rp. 9.999.999')
             .notRequired(),
         }),
-        onSubmit: async (values: any, {resetForm}) => {
+        onSubmit: async (values: any) => {
             try {
                 const body = [
                     { type_payment: 'Semesteran', minimum_payment: values.Semesteran, note: values.note_Semesteran },

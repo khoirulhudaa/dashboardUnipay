@@ -54,7 +54,6 @@ const useShopFormik = ({ onError }:{ onError?: any }) => {
                 
             } catch (error: any) {
                 onError(error.message)
-                console.log('error shop:', error.message)
             }
         }
     })
