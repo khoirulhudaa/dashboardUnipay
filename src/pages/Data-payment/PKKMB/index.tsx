@@ -56,7 +56,7 @@ const PKKMB = () => {
         <>
             <div className="panel">
                 <div className="flex flex-col mb-5 gap-5">
-                    <h5 className="font-semibold text-lg dark:text-white-light">Data Semesteran ({prodi ?? '-'})</h5>
+                    <h5 className="font-semibold text-lg dark:text-white-light">Data PKKMB ({prodi ?? '-'})</h5>
                     <div className="flex items-center">
                         <input type="text" className="form-input w-auto py-3 mr-3" placeholder="Kode transaksi" value={code} onChange={(e) => setCode(e.target.value)} />
                         <input type="text" className="form-input w-auto py-3 mr-3" placeholder="Tahun ajaran" value={year} onChange={(e) => setYear(e.target.value)} />
