@@ -84,7 +84,6 @@ export const usePayment = ({onError, onResponse}: {onError?: any, onResponse?: a
     })
 
     useEffect(() => {
-        console.log('d', payment[4].minimum_payment)
         formik.setValues({
             Semesteran: payment ? payment[4].minimum_payment : 0,
             UP: payment ? payment[2].minimum_payment : 0,
