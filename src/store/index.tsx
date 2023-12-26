@@ -1,13 +1,13 @@
 // reducers/index.js
 import { combineReducers } from '@reduxjs/toolkit';
 import themeConfigSlice from './themeConfigSlice';
-import authSlice from './authSlice';
 import paymentSlice from './paymentSlice';
+import authSlice from './authSlice';
 
 const rootReducer = combineReducers({
     themeConfig: themeConfigSlice,
-    authSlice,
-    paymentSlice
+    paymentSlice,
+    authSlice
 });
 
 export default rootReducer;

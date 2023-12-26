@@ -8,7 +8,7 @@ import Table from '../../../components/table';
 import { isEqual } from '../../../helpers/equal';
 import API from '../../../services/api';
 
-const Users = () => {
+const Sertification = () => {
 
     const [code, setCode] = useState<string>("")
     const [year, setYear] = useState<string>("")
@@ -27,7 +27,7 @@ const Users = () => {
             try {
                 const response = await API.getAllHistoryPayments()
                 const filteredData = response.data.data.filter((item: any) => {
-                    return item.prodi === 'Teknik Informatika' && item.type_payment === 'Sertification';
+                    return item.prodi === prodi && item.type_payment === 'Sertification';
                 });
                 if(!isEqual(dataHistory, response.data.data)) {
                     setDataHistory(filteredData)
@@ -89,4 +89,4 @@ const Users = () => {
     );
 };
 
-export default Users;
+export default Sertification;

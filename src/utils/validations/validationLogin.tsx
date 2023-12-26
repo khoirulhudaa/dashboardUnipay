@@ -26,10 +26,12 @@ export const useLoginFormik = ({onError}: {onError?: any}) => {
         onSubmit: async (values: any, {resetForm}) => {
             try {
                 const response = await API.checkAccountadmin(values)
+                console.log('log:',response.data.data)
                 if(response.data.status === 401 || response.data.status === 404) {  
                     onError(response.data.message)
                 }else {
                     dispatch(authSignIn(response.data.data))
+                    console.log('log:',response.data.data)
                     dispatch(saveToken(response.data.token))
                     resetForm()
                     navigate('/')

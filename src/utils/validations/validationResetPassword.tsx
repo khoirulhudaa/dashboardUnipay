@@ -1,18 +1,15 @@
 import { AxiosResponse } from 'axios';
 import { useFormik } from 'formik';
-import * as Yup from 'yup';
 import { useNavigate, useParams } from 'react-router-dom';
+import * as Yup from 'yup';
 import API from '../../services/api';
-import { signSellerInterface } from '../interfaces/signAdminInterface';
-import store from '../../store/store';
 
 
 export const useResetPassword = ({onError}: {onError?: any}) => {
     const navigate = useNavigate()
     const { token } = useParams()
-    const auth = store.getState().authSlice.auth
 
-    const formik = useFormik<signSellerInterface>({
+    const formik = useFormik<any>({
         initialValues: {
             password: '',
             confirmPassword: ''

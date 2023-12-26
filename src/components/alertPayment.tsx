@@ -58,7 +58,6 @@ const formik = useWithdrawFormik({
                             name='account_number' 
                             label='Account/telephone number'
                             id='paymentMethod'
-                            onError={formik.errors.account_number}
                             onTouched={!!formik.touched.account_number}
                             onChange={formik.handleChange} 
                             onBlur={formik.handleBlur} 

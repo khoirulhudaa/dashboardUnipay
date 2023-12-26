@@ -3,13 +3,12 @@ import { useFormik } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import * as Yup from 'yup';
 import API from '../../services/api';
-import { signSellerInterface } from '../interfaces/signAdminInterface';
 
 
 export const useForgotPassword = ({onError}: {onError?: any}) => {
     const navigate = useNavigate()
 
-    const formik = useFormik<signSellerInterface>({
+    const formik = useFormik<any>({
         initialValues: {
             email_seller: '',
         },
