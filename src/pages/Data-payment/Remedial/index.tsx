@@ -27,7 +27,7 @@ const Remedial = () => {
             try {
                 const response = await API.getAllHistoryPayments()
                 const filteredData = response.data.data.filter((item: any) => {
-                    return item.prodi === prodi && item.type_payment === 'Remedial';
+                    return item.prodi === prodi && item.type_payment === 'UP';
                 });
                 if(!isEqual(dataHistory, response.data.data)) {
                     setDataHistory(filteredData)
