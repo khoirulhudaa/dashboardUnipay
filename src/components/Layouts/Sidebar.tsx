@@ -244,12 +244,12 @@ const Sidebar = () => {
                                                     </svg>
                                                     </button>
                                                     <div className={`mt-4 ml-9 transition-all duration-300 ${isOpen ? 'block' : 'hidden'}`}>
-                                                    <Link to={'/data-payment/Semester/Rekaya Perangkat Lunak'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> Semesteran</Link>
-                                                    <Link to={'/data-payment/Remedial/Rekaya Perangkat Lunak'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> Ujian perbaikan</Link>
-                                                    <Link to={'/data-payment/PKKMB/Rekaya Perangkat Lunak'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> PPKMB</Link>
-                                                    <Link to={'/data-payment/UTS/Rekaya Perangkat Lunak'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> UTS</Link>
-                                                    <Link to={'/data-payment/UAS/Rekaya Perangkat Lunak'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> UAS</Link>
-                                                    <Link to={'/data-payment/Sertification/Rekaya Perangkat Lunak'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> Sertifikasi</Link>
+                                                    <Link to={'/data-payment/Semester/Rekayasa Perangkat Lunak'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> Semesteran</Link>
+                                                    <Link to={'/data-payment/Remedial/Rekayasa Perangkat Lunak'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> Ujian perbaikan</Link>
+                                                    <Link to={'/data-payment/PKKMB/Rekayasa Perangkat Lunak'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> PPKMB</Link>
+                                                    <Link to={'/data-payment/UTS/Rekayasa Perangkat Lunak'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> UTS</Link>
+                                                    <Link to={'/data-payment/UAS/Rekayasa Perangkat Lunak'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> UAS</Link>
+                                                    <Link to={'/data-payment/Sertification/Rekayasa Perangkat Lunak'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> Sertifikasi</Link>
                                                     </div>
                                                 </div>
                                             </div>

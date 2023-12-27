@@ -25,12 +25,8 @@ const LoginBoxed = () => {
     }
 
     return (
-        <div className="relative md:overflow-hidden flex justify-center items-center min-h-screen bg-cover bg-center">
-            <img 
-                src='/assets/images/Card.svg'
-                className='absolute transform w-[170%] opacity-[0.5]'
-            />
-            <div className="panel sm:w-[480px] m-6 max-w-lg w-full">
+        <div className="relative md:overflow-hidden flex justify-between bg-blue-200 items-center min-h-screen bg-cover bg-center">
+            <div className="panel ml-auto w-[30%] h-screen max-w-lg w-full">
                 <h2 className="font-bold text-2xl mb-[15px] mt-5">Sign In</h2>
                 <p className="mb-7">Enter your email and password to login</p>
                 <FormGroup error={errorMessage} handleErrorMessage={handleErrorMessage} handleResponse={handleResponseMessage} type='signIn' />
@@ -42,6 +38,12 @@ const LoginBoxed = () => {
                         </Link>
                     </p>
                 </div>
+            </div>
+            <div className='w-[70%] h-screen overflow-hidden flex items-center justify-center'>
+                <img 
+                    src='/assets/images/mockup.svg'
+                    className='scale-[0.6] ml-auto mr-auto'
+                />
             </div>
         </div>
     );
