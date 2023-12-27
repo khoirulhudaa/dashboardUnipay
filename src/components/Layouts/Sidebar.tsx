@@ -15,10 +15,10 @@ const Sidebar = () => {
     const themeConfig = useSelector((state: any) => state.themeConfig);
     const semidark = useSelector((state: any) => state.themeConfig.semidark);
     const [isOpen, setIsOpen] = useState(false);
-
-    const toggleSidebare = () => {
-        setIsOpen(!isOpen);
-    };
+    const [isOpen2, setIsOpen2] = useState(false);
+    const [isOpen3, setIsOpen3] = useState(false);
+    const [isOpen4, setIsOpen4] = useState(false);
+    const [isOpen5, setIsOpen5] = useState(false);
 
     const location = useLocation();
  
@@ -57,7 +57,6 @@ const Sidebar = () => {
         }
 
     }
-
 
     return (
         <div className={semidark ? 'dark' : ''}>
@@ -167,6 +166,8 @@ const Sidebar = () => {
                                             </div>
                                         </NavLink>
                                     </li>
+
+                                    {/* List payment by PRODI */}
                                     <li className="nav-item mb-9 text-white">
                                         <div className="group px-3">
                                             <div className="flex items-center">
@@ -215,7 +216,7 @@ const Sidebar = () => {
                                         <div className="group px-3">
                                             <div className="flex items-center">
                                                 <div className="group w-full">
-                                                    <button className="flex items-center w-full text-left cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+                                                    <button className="flex items-center w-full text-left cursor-pointer" onClick={() => setIsOpen2(!isOpen2)}>
                                                     <svg className="group-hover:!text-primary text-white" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path
                                                             opacity="0.5"
@@ -239,11 +240,11 @@ const Sidebar = () => {
                                                     <p className='ml-[12px]'>
                                                         RPL
                                                     </p>
-                                                    <svg className={`ml-auto w-4 h-4 transition-transform transform ${isOpen ? 'rotate-90' : 'rotate-0'}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <svg className={`ml-auto w-4 h-4 transition-transform transform ${isOpen2 ? 'rotate-90' : 'rotate-0'}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                                     </svg>
                                                     </button>
-                                                    <div className={`mt-4 ml-9 transition-all duration-300 ${isOpen ? 'block' : 'hidden'}`}>
+                                                    <div className={`mt-4 ml-9 transition-all duration-300 ${isOpen2 ? 'block' : 'hidden'}`}>
                                                     <Link to={'/data-payment/Semester/Rekayasa Perangkat Lunak'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> Semesteran</Link>
                                                     <Link to={'/data-payment/Remedial/Rekayasa Perangkat Lunak'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> Ujian perbaikan</Link>
                                                     <Link to={'/data-payment/PKKMB/Rekayasa Perangkat Lunak'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> PPKMB</Link>
@@ -259,7 +260,7 @@ const Sidebar = () => {
                                         <div className="group px-3">
                                             <div className="flex items-center">
                                                 <div className="group w-full">
-                                                    <button className="flex items-center w-full text-left cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+                                                    <button className="flex items-center w-full text-left cursor-pointer" onClick={() => setIsOpen5(!isOpen5)}>
                                                     <svg className="group-hover:!text-primary text-white" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path
                                                             opacity="0.5"
@@ -283,11 +284,11 @@ const Sidebar = () => {
                                                     <p className='ml-[12px]'>
                                                         MK
                                                     </p>
-                                                    <svg className={`ml-auto w-4 h-4 transition-transform transform ${isOpen ? 'rotate-90' : 'rotate-0'}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <svg className={`ml-auto w-4 h-4 transition-transform transform ${isOpen5 ? 'rotate-90' : 'rotate-0'}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                                     </svg>
                                                     </button>
-                                                    <div className={`mt-4 ml-9 transition-all duration-300 ${isOpen ? 'block' : 'hidden'}`}>
+                                                    <div className={`mt-4 ml-9 transition-all duration-300 ${isOpen5 ? 'block' : 'hidden'}`}>
                                                     <Link to={'/data-payment/Semester/Manajemen Komputerisasi'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> Semesteran</Link>
                                                     <Link to={'/data-payment/Remedial/Manajemen Komputerisasi'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> Ujian perbaikan</Link>
                                                     <Link to={'/data-payment/PKKMB/Manajemen Komputerisasi'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> PPKMB</Link>
@@ -303,7 +304,7 @@ const Sidebar = () => {
                                         <div className="group px-3">
                                             <div className="flex items-center">
                                                 <div className="group w-full">
-                                                    <button className="flex items-center w-full text-left cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+                                                    <button className="flex items-center w-full text-left cursor-pointer" onClick={() => setIsOpen3(!isOpen3)}>
                                                     <svg className="group-hover:!text-primary text-white" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path
                                                             opacity="0.5"
@@ -327,11 +328,11 @@ const Sidebar = () => {
                                                     <p className='ml-[12px]'>
                                                         MI
                                                     </p>
-                                                    <svg className={`ml-auto w-4 h-4 transition-transform transform ${isOpen ? 'rotate-90' : 'rotate-0'}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <svg className={`ml-auto w-4 h-4 transition-transform transform ${isOpen3 ? 'rotate-90' : 'rotate-0'}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                                     </svg>
                                                     </button>
-                                                    <div className={`mt-4 ml-9 transition-all duration-300 ${isOpen ? 'block' : 'hidden'}`}>
+                                                    <div className={`mt-4 ml-9 transition-all duration-300 ${isOpen3 ? 'block' : 'hidden'}`}>
                                                     <Link to={'/data-payment/Semester/Manajemen Informatika'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> Semesteran</Link>
                                                     <Link to={'/data-payment/Remedial/Manajemen/Manajemen Informatika'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> Ujian perbaikan</Link>
                                                     <Link to={'/data-payment/PKKMB/Manajemen/Manajemen Informatika'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> PPKMB</Link>
@@ -347,7 +348,7 @@ const Sidebar = () => {
                                         <div className="group px-3">
                                             <div className="flex items-center">
                                                 <div className="group w-full">
-                                                    <button className="flex items-center w-full text-left cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
+                                                    <button className="flex items-center w-full text-left cursor-pointer" onClick={() => setIsOpen4(!isOpen4)}>
                                                     <svg className="group-hover:!text-primary text-white" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <path
                                                             opacity="0.5"
@@ -371,11 +372,11 @@ const Sidebar = () => {
                                                     <p className='ml-[12px]'>
                                                         KA
                                                     </p>
-                                                    <svg className={`ml-auto w-4 h-4 transition-transform transform ${isOpen ? 'rotate-90' : 'rotate-0'}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                    <svg className={`ml-auto w-4 h-4 transition-transform transform ${isOpen4 ? 'rotate-90' : 'rotate-0'}`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                                                     </svg>
                                                     </button>
-                                                    <div className={`mt-4 ml-9 transition-all duration-300 ${isOpen ? 'block' : 'hidden'}`}>
+                                                    <div className={`mt-4 ml-9 transition-all duration-300 ${isOpen4 ? 'block' : 'hidden'}`}>
                                                     <Link to={'/data-payment/Semester/Komputerisasi Akuntansi'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> Semesteran</Link>
                                                     <Link to={'/data-payment/Remedial/Komputerisasi Akuntansi'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> Ujian perbaikan</Link>
                                                     <Link to={'/data-payment/PKKMB/Komputerisasi Akuntansi'} className="flex items-center mb-3"><FaBookmark className='mr-3' /> PPKMB</Link>
@@ -414,6 +415,8 @@ const Sidebar = () => {
                                             </div>
                                         </NavLink>
                                     </li>
+                                    {/* List payment by PRODI */}
+
                                     <li className="nav-item mb-6 bg-white hover:brightness-[90%] hover:text-red-500 rounded-md cursor-pointer active:scale-[0.98]">
                                         <div className='px-3 py-[10px]' onClick={(e) => logOut(e)}>
                                             <div className="flex items-center">

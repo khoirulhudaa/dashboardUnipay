@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { FaSpinner } from 'react-icons/fa';
+import { FaFilePdf, FaSpinner } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import SweetAlert from '../../../components/alertBox';
@@ -7,8 +7,11 @@ import Button from '../../../components/button';
 import Table from '../../../components/table';
 import { isEqual } from '../../../helpers/equal';
 import API from '../../../services/api';
+import { usePDF } from 'react-to-pdf';
 
 const Semester = () => {
+    const { toPDF, targetRef } = usePDF({filename: 'table.pdf'});
+
 
     const [code, setCode] = useState<string>("")
     const [year, setYear] = useState<string>("")
@@ -61,15 +64,17 @@ const Semester = () => {
                         <input type="text" className="form-input w-auto py-3 mr-3" placeholder="Kode transaksi" value={code} onChange={(e) => setCode(e.target.value)} />
                         <input type="text" className="form-input w-auto py-3 mr-3" placeholder="Tahun ajaran" value={year} onChange={(e) => setYear(e.target.value)} />
                         <input type="text" className="form-input w-auto py-3 mr-3" placeholder="Kelas" value={classRoom} onChange={(e) => setClassRoom(e.target.value)} />
-                        <div className='ml-auto'>
+                        <div className='ml-auto flex items-center'>
                             <Button onClick={() => setUpdate(true)} text='Muat ulang' typeButton='with-icon' icon={<FaSpinner />} />
+                            <div className='mx-3'></div>
+                            <Button onClick={() => toPDF()} method='delete' typeButton='with-icon' icon={<FaFilePdf />} text='Unduh PDF' />
                         </div>
                     </div>
                 </div>
                 <div className="datatables">
                     <div className="flex-auto px-0 pt-0 pb-2">
                     <div className="p-0 overflow-x-auto">
-                        <Table classRoom={classRoom} year={year} code={code} columns={columns} data={dataHistory} />
+                        <Table targetRef={targetRef} classRoom={classRoom} year={year} code={code} columns={columns} data={dataHistory} />
                     </div>
                 </div>
                 </div>
