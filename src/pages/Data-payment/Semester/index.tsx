@@ -74,7 +74,7 @@ const Semester = () => {
                 <div className="datatables">
                     <div className="flex-auto px-0 pt-0 pb-2">
                     <div className="p-0 overflow-x-auto">
-                        <Table targetRef={targetRef} classRoom={classRoom} year={year} code={code} columns={columns} data={dataHistory} />
+                        <Table prodi={prodi} targetRef={targetRef} classRoom={classRoom} year={year} code={code} columns={columns} data={dataHistory} />
                     </div>
                 </div>
                 </div>
