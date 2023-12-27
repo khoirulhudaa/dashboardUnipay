@@ -13,14 +13,12 @@ interface Column {
 interface TableWDAdminProps {
   data?: Column[],
   columns?: Column[],
-  update?: any,
   code?: string,
   year?: string,
   classRoom?: string,
-  prodi?: string
 }
 
-const Table: React.FC<TableWDAdminProps> = ({ data, columns, update, code, year, classRoom, prodi }) => {
+const Table: React.FC<TableWDAdminProps> = ({ data, columns, code, year, classRoom }) => {
   
 return (
     <table className="items-center w-full mb-0 align-top border-collapse dark:border-white/40 text-slate-500">

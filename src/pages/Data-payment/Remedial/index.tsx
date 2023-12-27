@@ -29,6 +29,8 @@ const Remedial = () => {
                 const filteredData = response.data.data.filter((item: any) => {
                     return item.prodi === prodi && item.type_payment === 'UP';
                 });
+                console.log(prodi)
+                console.log(filteredData)
                 if(!isEqual(dataHistory, response.data.data)) {
                     setDataHistory(filteredData)
                     setUpdateStatus(false)
@@ -69,7 +71,7 @@ const Remedial = () => {
                 <div className="datatables">
                     <div className="flex-auto px-0 pt-0 pb-2">
                     <div className="p-0 overflow-x-auto">
-                    <Table prodi={'Teknik Informatika'} classRoom={classRoom} year={year} code={code} columns={columns} data={dataHistory} update={(e: boolean) => setUpdate(e)} />
+                    <Table classRoom={classRoom} year={year} code={code} columns={columns} data={dataHistory} />
                     </div>
                 </div>
                 </div>
