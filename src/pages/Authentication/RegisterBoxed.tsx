@@ -38,20 +38,22 @@ const RegisterBoxed = () => {
     return (
         <div>
             <div className="relative md:overflow-hidden flex justify-center items-center min-h-screen bg-cover bg-center">
-                <img 
-                    src='/assets/images/Card.svg'
-                    className='absolute transform w-[170%] opacity-[0.5]'
-                />
-                <div className="panel sm:w-[480px] m-6 max-w-lg w-full">
-                <h2 className="font-bold text-2xl mb-[15px] mt-5">Sign Up</h2>
-                    <p className="mb-7">Lets go join with ElectShop</p>
+                <div className="panel w-full md:w-[30%] overflow-auto p-[20px] md:p-[30px] min-h-screen max-w-lg w-full">
+                    <h2 className="font-bold text-2xl mb-[15px] mt-5">Daftar</h2>
+                    <p className="mb-7">Bergabung bersama UnipayDasboard</p>
                     <FormGroup error={errorMessage} handleErrorMessage={handleErrorMessage} handleResponse={handleResponseMessage} />
                     <p className="text-center mt-6">
-                        Already have an account ?
+                        Sudah punya akun ?
                         <Link to="/auth/signin" className="font-bold text-primary hover:underline ltr:ml-1 rtl:mr-1">
-                            Sign In
+                            Masuk
                         </Link>
                     </p>
+                </div>
+                <div className='w-[70%] h-screen overflow-hidden bg-blue-200 hidden md:flex items-center justify-center'>
+                    <img 
+                        src='/assets/images/mockup.svg'
+                        className='w-[60%] ml-auto mr-auto'
+                    />
                 </div>
             </div>
         </div>

@@ -48,29 +48,29 @@ switch(type) {
                     <InputField 
                         value={formikSignIn.values.email_admin} 
                         name='email_admin' 
-                        label='email'
+                        label='Email admin'
                         onError={formikSignIn.errors.email_admin}
                         onTouched={!!formikSignIn.touched.email_admin}
                         onChange={formikSignIn.handleChange} 
                         onBlur={formikSignIn.handleBlur} 
-                        placeholder="Enter Email" 
+                        placeholder="your@gmail.com" 
                     />
                 </div>
                 <div>
                     <InputField 
                         value={formikSignIn.values.password} 
                         name='password' 
-                        label='password'
+                        label='Kata sandi'
                         type='password'
                         onError={formikSignIn.errors.password}
                         onTouched={!!formikSignIn.touched.password}
                         onChange={formikSignIn.handleChange} 
                         onBlur={formikSignIn.handleBlur} 
-                        placeholder="Enter Password" 
+                        placeholder="Masukan kata sandi" 
                     />
                 </div>
                 <button type="submit" className="btn btn-primary w-full">
-                    SIGN IN
+                    MASUK
                 </button>
             </form>
         )
@@ -316,26 +316,26 @@ switch(type) {
                 <InputField 
                     value={formik.values.admin_name} 
                     name='admin_name' 
-                    label='seller name'
+                    label='Nama admin'
                     id='sellerName'
                     onError={formik.errors.admin_name}
                     onTouched={!!formik.touched.admin_name}
                     onChange={formik.handleChange} 
                     onBlur={formik.handleBlur} 
-                    placeholder="Enter Your Name" 
+                    placeholder="Masukan nama admin" 
                 />
             </div>
             <div>
                 <InputField 
                     value={formik.values.email_admin} 
                     name='email_admin' 
-                    label='email'
+                    label='Email admin'
                     id='email'
                     onError={formik.errors.email_admin}
                     onTouched={!!formik.touched.email_admin}
                     onChange={formik.handleChange} 
                     onBlur={formik.handleBlur} 
-                    placeholder="Enter Email" 
+                    placeholder="your@gmail.com" 
                 />
             </div>
             <div>
@@ -343,30 +343,30 @@ switch(type) {
                     value={formik.values.password} 
                     name='password' 
                     id='password'
-                    label='password'
+                    label='Kata sandi'
                     type='password'
                     onError={formik.errors.password}
                     onTouched={!!formik.touched.password}
                     onChange={formik.handleChange} 
                     onBlur={formik.handleBlur} 
-                    placeholder="Enter Password" 
+                    placeholder="Masukan kata sandi" 
                 />
             </div>
             <div>
                 <InputField 
                     value={formik.values.telephone_admin} 
                     name='telephone_admin' 
-                    label='Number Telephone'
+                    label='Nomer whatsapp'
                     id='telephone'
                     onError={formik.errors.telephone_admin}
                     onTouched={!!formik.touched.telephone_admin}
                     onChange={formik.handleChange} 
                     onBlur={formik.handleBlur} 
-                    placeholder="Your number" 
+                    placeholder="Y08926xxxx6733" 
                 />
             </div>
             <button type="submit" className="btn btn-primary w-full">
-                Daftar
+                DAFTAR
             </button>
         </form>
         )
