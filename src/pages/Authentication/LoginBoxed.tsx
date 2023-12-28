@@ -25,7 +25,7 @@ const LoginBoxed = () => {
     }
 
     return (
-        <div className="relative md:overflow-hidden flex justify-between bg-blue-200 items-center min-h-screen bg-cover bg-center">
+        <div className="relative md:overflow-hidden flex justify-between bg-blue-500 items-center min-h-screen bg-cover bg-center">
             <div className="panel ml-auto w-full md:w-[30%] h-screen max-w-lg p-[20px] md:p-[30px] w-full">
                 <h2 className="font-bold text-2xl mb-[15px] mt-5">Masuk</h2>
                 <p className="mb-7">Masukan email dan password anda</p>
@@ -41,7 +41,7 @@ const LoginBoxed = () => {
             </div>
             <div className='relative w-[70%] h-screen overflow-hidden hidden md:flex items-center justify-center'>
                 <img 
-                    src='/assets/images/mockup.svg'
+                    src='/assets/images/logoUnipay.png'
                     className='w-[60%] ml-auto mr-auto'
                 />
             </div>

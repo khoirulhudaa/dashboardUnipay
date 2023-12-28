@@ -37,7 +37,7 @@ const RegisterBoxed = () => {
 
     return (
         <div>
-            <div className="relative md:overflow-hidden flex justify-center items-center min-h-screen bg-cover bg-center">
+            <div className="relative md:overflow-hidden flex justify-center items-center min-h-screen bg-blue-500 bg-cover bg-center">
                 <div className="panel w-full md:w-[30%] overflow-auto p-[20px] md:p-[30px] min-h-screen max-w-lg w-full">
                     <h2 className="font-bold text-2xl mb-[15px] mt-5">Daftar</h2>
                     <p className="mb-7">Bergabung bersama UnipayDasboard</p>
@@ -49,9 +49,9 @@ const RegisterBoxed = () => {
                         </Link>
                     </p>
                 </div>
-                <div className='w-[70%] h-screen overflow-hidden bg-blue-200 hidden md:flex items-center justify-center'>
+                <div className='w-[70%] h-screen overflow-hidden hidden md:flex items-center justify-center'>
                     <img 
-                        src='/assets/images/mockup.svg'
+                        src='/assets/images/logoUnipay.png'
                         className='w-[60%] ml-auto mr-auto'
                     />
                 </div>
