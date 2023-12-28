@@ -44,7 +44,7 @@ const Semester = () => {
         };
         
         getDataShop();
-    }, [dispatch, update, updateStatus]);
+    }, [dispatch, prodi, update, updateStatus]);
 
     const columns = [
         {label: 'NIM'},
