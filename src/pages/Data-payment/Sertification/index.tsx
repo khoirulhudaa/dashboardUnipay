@@ -30,7 +30,7 @@ const Semester = () => {
             try {
                 const response = await API.getAllHistoryPayments()
                 const filteredData = response.data.data.filter((item: any) => {
-                    return item.prodi === prodi && item.type_payment === 'Sertification';
+                    return item.prodi === prodi && item.type_payment === 'Sertifikasi';
                 });
                 if(!isEqual(dataHistory, response.data.data)) {
                     setDataHistory(filteredData)
